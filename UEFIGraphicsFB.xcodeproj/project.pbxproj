@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		416882EE263E3DD5005A10E2 /* UEFIGraphicsFB.h in Headers */ = {isa = PBXBuildFile; fileRef = 416882ED263E3DD5005A10E2 /* UEFIGraphicsFB.h */; };
 		416882F0263E3DD5005A10E2 /* UEFIGraphicsFB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 416882EF263E3DD5005A10E2 /* UEFIGraphicsFB.cpp */; };
+		CEAE89A026404DF40073A6D6 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAE899F26404DF40073A6D6 /* libkmod.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		416882ED263E3DD5005A10E2 /* UEFIGraphicsFB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UEFIGraphicsFB.h; sourceTree = "<group>"; };
 		416882EF263E3DD5005A10E2 /* UEFIGraphicsFB.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UEFIGraphicsFB.cpp; sourceTree = "<group>"; };
 		416882F1263E3DD5005A10E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAE899F26404DF40073A6D6 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = ../Lilu/MacKernelSDK/Library/x86_64/libkmod.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAE89A026404DF40073A6D6 /* libkmod.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +37,7 @@
 			children = (
 				416882EC263E3DD5005A10E2 /* UEFIGraphicsFB */,
 				416882EB263E3DD5005A10E2 /* Products */,
+				CEAE899E26404DF30073A6D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +57,14 @@
 				416882F1263E3DD5005A10E2 /* Info.plist */,
 			);
 			path = UEFIGraphicsFB;
+			sourceTree = "<group>";
+		};
+		CEAE899E26404DF30073A6D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE899F26404DF40073A6D6 /* libkmod.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +105,7 @@
 		416882E1263E3DD5005A10E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					416882E9263E3DD5005A10E2 = {
 						CreatedOnToolsVersion = 12.4;
@@ -144,10 +156,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -191,11 +204,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.11;
+				OTHER_CFLAGS = (
+					"-Wno-stdlibcxx-not-found",
+					"-nostdlib",
+					"-fallow-unsupported",
+				);
 			};
 			name = Debug;
 		};
@@ -203,10 +220,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -244,10 +262,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = macosx10.11;
+				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = (
+					"-Wno-stdlibcxx-not-found",
+					"-nostdlib",
+					"-fallow-unsupported",
+				);
 			};
 			name = Release;
 		};
@@ -259,7 +281,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
 				INFOPLIST_FILE = UEFIGraphicsFB/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
 				MODULE_NAME = fish.goldfish64.UEFIGraphicsFB;
 				MODULE_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fish.goldfish64.UEFIGraphicsFB;
@@ -277,7 +299,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
 				INFOPLIST_FILE = UEFIGraphicsFB/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
 				MODULE_NAME = fish.goldfish64.UEFIGraphicsFB;
 				MODULE_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fish.goldfish64.UEFIGraphicsFB;

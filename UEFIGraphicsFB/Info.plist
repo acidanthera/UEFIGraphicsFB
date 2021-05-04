@@ -20,6 +20,23 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>IOKitPersonalities</key>
 	<dict>
+		<key>DummyGraphics</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>IOClass</key>
+			<string>DummyGraphics</string>
+			<key>IOMatchCategory</key>
+			<string>IOFramebuffer</string>
+			<key>IOPCIClassMatch</key>
+			<string>0x03000000&amp;0xFF000000</string>
+			<key>IOPCITunnelCompatible</key>
+			<true/>
+			<key>IOProbeScore</key>
+			<integer>100000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
 		<key>UEFIGraphicsFB</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -34,8 +51,8 @@
 			<string>IOKit</string>
 		</dict>
 	</dict>
-  <key>NSHumanReadableCopyright</key>
-    <string>Copyright © 2021 Goldfish64. All rights reserved.</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2021 Goldfish64. All rights reserved.</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.iokit.IOGraphicsFamily</key>

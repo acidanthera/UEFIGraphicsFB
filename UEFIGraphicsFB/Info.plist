@@ -43,20 +43,20 @@
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>IOClass</key>
 			<string>$(PRODUCT_NAME:rfc1034identifier)</string>
-			<key>IOMatchCategory</key>
-			<string>$(PRODUCT_NAME:rfc1034identifier)</string>
+      		<key>IOMatchCategory</key>
+      		<string>IOPlatformDevice</string>
+      		<key>IOName</key>
+      		<string>display</string>
 			<key>IOProviderClass</key>
-			<string>IOResources</string>
-			<key>IOResourceMatch</key>
-			<string>IOKit</string>
+			<string>AppleACPIPlatformExpert</string>
+      		<key>name</key>
+      		<data>ZGlzcGxheQ==</data>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2021 Goldfish64. All rights reserved.</string>
 	<key>OSBundleLibraries</key>
 	<dict>
-		<key>com.apple.iokit.IOGraphicsFamily</key>
-		<string>2.0</string>
 		<key>com.apple.kpi.iokit</key>
 		<string>8.0.0</string>
 		<key>com.apple.kpi.libkern</key>

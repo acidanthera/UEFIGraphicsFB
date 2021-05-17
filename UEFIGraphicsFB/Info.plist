@@ -43,14 +43,14 @@
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>IOClass</key>
 			<string>$(PRODUCT_NAME:rfc1034identifier)</string>
-      		<key>IOMatchCategory</key>
-      		<string>IOPlatformDevice</string>
-      		<key>IOName</key>
-      		<string>display</string>
+			<key>IOMatchCategory</key>
+			<string>IOPlatformDevice</string>
+			<key>IOName</key>
+			<string>display</string>
 			<key>IOProviderClass</key>
 			<string>AppleACPIPlatformExpert</string>
-      		<key>name</key>
-      		<data>ZGlzcGxheQ==</data>
+			<key>name</key>
+			<data>ZGlzcGxheQA=</data>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>

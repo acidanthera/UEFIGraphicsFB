@@ -10,8 +10,6 @@
 		416882EE263E3DD5005A10E2 /* UEFIGraphicsFB.h in Headers */ = {isa = PBXBuildFile; fileRef = 416882ED263E3DD5005A10E2 /* UEFIGraphicsFB.h */; };
 		416882F0263E3DD5005A10E2 /* UEFIGraphicsFB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 416882EF263E3DD5005A10E2 /* UEFIGraphicsFB.cpp */; };
 		CEAE89A026404DF40073A6D6 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAE899F26404DF40073A6D6 /* libkmod.a */; };
-		CEFF7E9526412BB600D6B242 /* DummyGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEFF7E9326412BB600D6B242 /* DummyGraphics.cpp */; };
-		CEFF7E9626412BB600D6B242 /* DummyGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = CEFF7E9426412BB600D6B242 /* DummyGraphics.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +18,6 @@
 		416882EF263E3DD5005A10E2 /* UEFIGraphicsFB.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UEFIGraphicsFB.cpp; sourceTree = "<group>"; };
 		416882F1263E3DD5005A10E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEAE899F26404DF40073A6D6 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = ../Lilu/MacKernelSDK/Library/x86_64/libkmod.a; sourceTree = "<group>"; };
-		CEFF7E9326412BB600D6B242 /* DummyGraphics.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = DummyGraphics.cpp; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
-		CEFF7E9426412BB600D6B242 /* DummyGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DummyGraphics.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +55,6 @@
 		416882EC263E3DD5005A10E2 /* UEFIGraphicsFB */ = {
 			isa = PBXGroup;
 			children = (
-				CEFF7E9426412BB600D6B242 /* DummyGraphics.h */,
-				CEFF7E9326412BB600D6B242 /* DummyGraphics.cpp */,
 				416882ED263E3DD5005A10E2 /* UEFIGraphicsFB.h */,
 				416882EF263E3DD5005A10E2 /* UEFIGraphicsFB.cpp */,
 				416882F1263E3DD5005A10E2 /* Info.plist */,
@@ -83,7 +77,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEFF7E9626412BB600D6B242 /* DummyGraphics.h in Headers */,
 				416882EE263E3DD5005A10E2 /* UEFIGraphicsFB.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,7 +171,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				416882F0263E3DD5005A10E2 /* UEFIGraphicsFB.cpp in Sources */,
-				CEFF7E9526412BB600D6B242 /* DummyGraphics.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

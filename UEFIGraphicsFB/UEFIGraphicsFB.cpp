@@ -46,6 +46,6 @@ bool UEFIGraphicsFB::start(IOService *provider) {
   //
   registerService();
   
-  DBGLOG("Framebuffer is at 0x%X (width %u height %u bits %u bytes/row %u)", videoBaseAddress, videoWidth, videoHeight, videoDepth, videoBytesPerRow);
+  SYSLOG("Framebuffer is at 0x%X (width %u height %u bits %u bytes/row %u)", videoBaseAddress, videoWidth, videoHeight, videoDepth, videoBytesPerRow);
   return true;
 }

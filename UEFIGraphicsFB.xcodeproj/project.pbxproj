@@ -309,6 +309,18 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
 				MODULE_NAME = fish.goldfish64.UEFIGraphicsFB;
 				MODULE_VERSION = 1.0.1;
+				OTHER_CFLAGS = (
+					"-Wno-stdlibcxx-not-found",
+					"-nostdlib",
+					"-fallow-unsupported",
+					"-target",
+					"i386-apple-macos10.6",
+				);
+				OTHER_LDFLAGS = (
+					"-static",
+					"-target",
+					"i386-apple-macos10.6",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fish.goldfish64.UEFIGraphicsFB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -327,6 +339,18 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
 				MODULE_NAME = fish.goldfish64.UEFIGraphicsFB;
 				MODULE_VERSION = 1.0.1;
+				OTHER_CFLAGS = (
+					"-Wno-stdlibcxx-not-found",
+					"-nostdlib",
+					"-fallow-unsupported",
+					"-target",
+					"i386-apple-macos10.6",
+				);
+				OTHER_LDFLAGS = (
+					"-static",
+					"-target",
+					"i386-apple-macos10.6",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fish.goldfish64.UEFIGraphicsFB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
